@@ -111,6 +111,18 @@ tripleStep(4); //returns 7
 tripleStep(5); //returns 13
 tripleStep(10); //returns 274
 ```
+```swift
+func tripleStep(_ n:Int) -> Int {
+if n == 0 {
+return 1
+}
+if n < 0 {
+return 0
+}
+return tripleStep(n-1) + tripleStep(n-2) + tripleStep(n-3)
+}
+tripleStep(10)
+```
 
 Source: Cracking the Coding Interview
 
