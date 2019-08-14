@@ -91,7 +91,15 @@ Write a function called `range` which takes in two numbers (num1, num2) as argum
 range(2,10); // returns [2, 3, 4, 5, 6,7, 8, 9, 10]
 range(17,20); // returns [17, 18, 19, 20]
 ```
-
+```swift
+func range(_ numOne:Int, _ numTwo:Int) -> [Int] {
+if numOne >= numTwo {
+return [numOne]
+}
+return [numOne] + range(numOne + 1, numTwo)
+}
+range(2,10)
+```
 
 - ### Triple Step
 
