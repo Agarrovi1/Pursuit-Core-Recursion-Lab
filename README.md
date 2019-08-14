@@ -29,6 +29,19 @@ Write a function called `multArr` that takes in an array of numbers as an argume
 multArr([2, 3, 5]); // returns 30
 multArr([5, 5, 1, 2]); //returns 50
 ```
+```swift
+func multArr(_ arr: [Int]) -> Int {
+var newArr = arr
+if newArr.isEmpty {
+return 1
+}
+guard let num = newArr.popLast() else {
+return 1
+}
+return num * multArr(newArr)
+}
+multArr([5, 5, 1, 2])
+```
 
 - ### Concatenate array
 
