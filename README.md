@@ -52,6 +52,17 @@ concatArr(['is', 'it', 'tomorrow']); // returns 'is it tomorrow'
 concatArr(['or', 'just', 'the', 'end', 'of', 'time']); //returns 'or just the end of time'
 ```
 
+```swift
+func concatArr(_ arr: [String]) -> String {
+var newArr = arr
+if newArr.count == 1 {
+return newArr[0]
+}
+return newArr.removeFirst() + " " + concatArr(newArr)
+}
+concatArr(["is", "it", "tomorrow"])
+```
+
 - ### Sum evens
 
 Write a function called `sumEvens` that takes in an array of numbers as an argument and recursively sums only the even numbers in the array.
