@@ -71,6 +71,17 @@ Write a function called `sumEvens` that takes in an array of numbers as an argum
 sumEvens([2, 3, 5, 6]); // returns 8
 sumEvens([10, 5, 1, 2, 12]); //returns 24
 ```
+```swift
+func sumEvens(_ arr:[Int]) -> Int {
+var evenArr = arr.filter({$0 % 2 == 0})
+if evenArr.count == 1 {
+return evenArr[0]
+}
+return evenArr.removeFirst() + sumEvens(evenArr)
+}
+sumEvens([2, 3, 5, 6])
+sumEvens([10, 5, 1, 2, 12])
+```
 
 - ### Recursive range
 
