@@ -10,6 +10,15 @@ output: 21
 
 //21 = 6 + 5 + 4 + 3 + 2 + 1
 ```
+```swift
+func sumOfAllFromOne(to num: Int) -> Int {
+if num <= 1 {
+return 1
+}
+return num + sumOfAllFromOne(to: num - 1)
+}
+sumOfAllFromOne(to: 6)
+```
 
 
 - ### Multiply array
